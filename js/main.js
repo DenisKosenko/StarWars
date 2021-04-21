@@ -1,4 +1,4 @@
-let requestURL = 'https://swapi.dev/api/people/?page=1';
+let requestURL = 'http://swapi.dev/api/people/?page=1';
 
 
 function sendRequest(method, url){
@@ -95,13 +95,13 @@ function mainRequest(method, url){
     buttonNext.addEventListener('click',function(){
         if(pageCount < 7){pageCount++}
         remove('swiper-slide')
-        mainRequest('GET', `https://swapi.dev/api/people/?page=${pageCount}`)
+        mainRequest('GET', `http://swapi.dev/api/people/?page=${pageCount}`)
     })
 
     buttonPrevious.addEventListener('click',function(){
         if(pageCount > 1){pageCount--}
         remove('swiper-slide')
-        mainRequest('GET', `https://swapi.dev/api/people/?page=${pageCount}`)
+        mainRequest('GET', `http://swapi.dev/api/people/?page=${pageCount}`)
     })
 })()
 
