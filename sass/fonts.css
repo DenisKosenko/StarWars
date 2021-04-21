@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Starjedi';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/Starjedi.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Starjhol';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/Starjhol.woff") format("woff");
+}
+/*# sourceMappingURL=fonts.css.map */
