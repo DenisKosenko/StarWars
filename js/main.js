@@ -61,16 +61,18 @@ function mainRequest(method, url){
                 },
             });
         },5000)
-    }
+    }//<h2 class="people__name-title">name character</h2><h2 class="people__name-title">gender</h2><h2 class="people__name-title">homeworld</h2>
 
     async function peopleCreate(people){
         let newSlide = document.createElement('div')
-        newSlide.innerHTML = `<h2>${people.name}</h2>
-                                <p>${people.gender}</p>
-                                <p>${await people.homeworld}</p>`
+        newSlide.innerHTML = `
+                              <h2 class="people__title">${people.name}</h2>
+                              <p class="people__name"><span>Gender</span> - ${people.gender}</p>
+                              <p class="people__name"><span>homeworld</span> - ${await people.homeworld}</p>
+                              <h2 class="people__name-title">films</h2>`
         this.filmsList = await people.films
         filmsList.forEach(film => {
-            newSlide.innerHTML = newSlide.innerHTML + `<p>${film}</p>`
+            newSlide.innerHTML = newSlide.innerHTML + `<p class="people__name people__film">"${film}"</p>`
         });
         newSlide.classList.add('swiper-slide')
         document.querySelector('.swiper-wrapper').appendChild(newSlide);
@@ -88,8 +90,8 @@ function mainRequest(method, url){
 
 
 (function buttonsManage(){
-    this.buttonNext = document.querySelector('.buttonNext')
-    this.buttonPrevious = document.querySelector('.buttonPrevious')
+    this.buttonNext = document.querySelector('.button__next')
+    this.buttonPrevious = document.querySelector('.button__previous')
     this.pageCount = 1
 
     buttonNext.addEventListener('click',function(){

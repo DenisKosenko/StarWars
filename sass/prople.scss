@@ -1,6 +1,66 @@
 
 .people{
-    // display: flex;
-    // justify-content: center;
     text-align: center;
+
+    &__title{
+        font-size: 30px;
+        color: $red;
+
+        text-shadow: 0 1px 0 #79050f, 
+        0 2px 0 #6e040d,
+        0 3px 0 #61040c,
+        0 4px 0 #4b0309,
+        0 6px 1px rgba(0,0,0,.1),
+        0 0 5px rgba(0,0,0,.1),
+        0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2),
+        0 5px 10px rgba(0,0,0,.25),
+        0 10px 10px rgba(0,0,0,.2),
+    }
+
+    &__name{
+        color: $silver;
+        //font-family: 'Starjhol';
+
+        &-title{
+            color: white;
+            text-shadow: 0 1px 0 #686868,
+                        0 2px 0 #494949,
+                        0 3px 0 #202020,
+
+                        0 6px 1px rgba(0,0,0,.1),
+                        0 0 5px rgba(0,0,0,.1),
+                        0 1px 3px rgba(0,0,0,.3),
+                        0 3px 5px rgba(0,0,0,.2),
+                        0 5px 10px rgba(0,0,0,.25),
+                        0 10px 10px rgba(0,0,0,.2),
+                        0 20px 20px rgba(0,0,0,.15);
+        }
+
+        span{
+            color: #a6c9c9;
+            font-size: 20px;
+        }
+    }
+
+    &__film{
+        color: $white;
+    }
+}
+
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__next, &__previous{
+        cursor: pointer;
+        border:none;
+        background: none;
+        outline: none;
+        bottom: none;
+        color: $green;
+        font-size: 20px;
+        font-family: 'Starjedi';;
+    }
 }
