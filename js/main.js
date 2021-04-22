@@ -60,8 +60,8 @@ function mainRequest(method, url){
                 prevEl: '.swiper-button-prev',
                 },
             });
-        },5000)
-    }//<h2 class="people__name-title">name character</h2><h2 class="people__name-title">gender</h2><h2 class="people__name-title">homeworld</h2>
+        },4000)
+    }
 
     async function peopleCreate(people){
         let newSlide = document.createElement('div')
