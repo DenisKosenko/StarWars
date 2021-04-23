@@ -20,7 +20,6 @@
 
     &__name{
         color: $silver;
-        //font-family: 'Starjhol';
 
         &-title{
             color: white;
@@ -61,7 +60,10 @@
         bottom: none;
         color: $yellow;
         font-size: 20px;
-        font-family: 'Starjedi';;
+        font-family: 'Starjedi';
+        &:disabled{
+            color: #202020;
+        }
     }
 
     &__previous{
@@ -74,7 +76,10 @@
         bottom: none;
         color: $yellow;
         font-size: 20px;
-        font-family: 'Starjedi';;
+        font-family: 'Starjedi';
+        &:disabled{
+            color: #202020;
+        }
     }
 }
 

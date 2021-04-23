@@ -36,7 +36,6 @@ async function filmsSearch(method, data){
         .then(details => {filmsArray.push(details.title);return filmsArray})
         .catch(err => console.log(err));
     }
-    //console.log(filmsArray)
     return filmsArray
 }
 
@@ -60,7 +59,7 @@ function mainRequest(method, url){
                 prevEl: '.swiper-button-prev',
                 },
             });
-        },4000)
+        },3000)
     }
 
     async function peopleCreate(people){
@@ -85,7 +84,7 @@ function mainRequest(method, url){
         while (element.length) {
           element[0].parentNode.removeChild(element[0]);
         }
-      }
+    }
 }
 
 
@@ -95,33 +94,33 @@ function mainRequest(method, url){
     this.pageCount = 1
 
     buttonNext.addEventListener('click',function(){
-        if(pageCount < 7){pageCount++}
-        remove('swiper-slide')
-        mainRequest('GET', `https://swapi.dev/api/people/?page=${pageCount}`)
+        if(pageCount < 9){
+            pageCount++;
+            buttonDisabled()
+            remove('swiper-slide')
+            mainRequest('GET', `https://swapi.dev/api/people/?page=${pageCount}`)}
     })
 
     buttonPrevious.addEventListener('click',function(){
-        if(pageCount > 1){pageCount--}
-        remove('swiper-slide')
-        mainRequest('GET', `https://swapi.dev/api/people/?page=${pageCount}`)
+        if(pageCount > 1){
+            pageCount--;
+            buttonDisabled()
+            remove('swiper-slide')
+            mainRequest('GET', `https://swapi.dev/api/people/?page=${pageCount}`)
+        }
     })
+
+    function buttonDisabled(){
+        if(this.pageCount > 8){
+            this.buttonNext.disabled = true;}
+        else{this.buttonNext.disabled = false}
+
+        if(this.pageCount < 2){
+            this.buttonPrevious.disabled = true;}
+        else{this.buttonPrevious.disabled = false}
+    }
+    buttonDisabled()
 })()
 
-
-
 mainRequest('GET', requestURL)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
